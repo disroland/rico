@@ -5,32 +5,32 @@ a{
 	text-decoration: none;
 	color: darkgreen;
 	text-transform: uppercase;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 body{
 height: 100vh;
-width: 100%;
+max-height: 100vh;
+width: 100vw;
+overflow: hidden;
 background-image: url(../img/bg_main.jpg);
-border: 1px solid gold; 
+background-repeat: no-repeat;
 padding: 5px 0;
 position: relative;
 display: flex;
 flex-direction: column;
-align-items: space-between;
 justify-content: center;
 font-family: 'Lobster', cursive;
-min-width: 400px;
+min-width: 320px;
 }
 header{
-
+	height: 60px;
 }
 
 .container{
 	width: 90%;
 	margin: 0 auto;
 	border: none;
-
 	padding: 0;
 }
 /*.logo{
@@ -45,10 +45,10 @@ header{
 	padding: 10px;
 	background-color: rgba(255,255,255, 0.6);
 	border-radius: 20px;
+	position: relative;
 }
 .header_menu{
 	display: flex;
-
 }
 
 .header_menu_items{
@@ -64,6 +64,8 @@ header{
 	color: black;
 	text-shadow: 1px 1px 1px transparent;
 	transition: .3s;
+	padding: 10px;
+	border-radius: 10px;
 }
 .header_menu_item:hover{
 	text-shadow: 1px 1px 1px gold
@@ -79,6 +81,7 @@ header{
 			width: 40px;
 			margin-left: 20px; 
 			position: relative;
+			z-index: 70
 		}
 
 .menu-btn span {
@@ -106,11 +109,11 @@ header{
 						bottom: 12px; 
 						transition: 1s}
 
-.menu-btn:hover span {
+.menu-btn.pressed span {
 	height: 0;
 }
-.menu-btn:hover span::before,
-.menu-btn:hover span::after
+.menu-btn.pressed span::before,
+.menu-btn.pressed span::after
 	{	
 		bottom: 0;
 		top: 0;
@@ -120,12 +123,35 @@ header{
 		transform: rotate(45deg);
 	}
 
-	.menu-btn:hover span::after
+	.menu-btn.pressed span::after
 	{
 		transform: rotate(-45deg);
 	}
 /*menu button end
 */
+/*hidden_menu*/
+.hidden_menu{
+	display: flex;
+	width: 0;
+	height: 100vh;
+	flex-direction: column;
+	position: absolute;
+	z-index: 60;
+	right: 0;
+	top: 100%;
+	transform: translateY(3000px);
+	transition: .5s;
+	background-color: rgba(255,255,255, 0.9);
+	border-radius: 10px;
+}
+.hidden_menu a{
+	margin: 0;
+}
+
+.show_hidden_menu{
+	transform: translateX(0);
+	width: 50vw;
+}
 
 /*main*/
 main{
@@ -134,9 +160,89 @@ main{
 	background-color: rgba(250,250,250, 0.9);
 	border: none;
 	margin: 10px 0;
-	overflow: auto;
-	
+	overflow: hidden;
+	height: calc(100vh - 67px)
 }
+
+.main_page_wrap{
+	width: 100%;
+	height: calc(100vh - 67px);
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+.parallax{
+	position: fixed;
+	height: 100vh;
+	width: 100vw
+}
+
+.main_page_content{
+	height: calc(100vh - 67px);
+	min-height: 300px;
+	z-index: 30;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: darkgreen;
+	letter-spacing: 9px
+}
+.main_page_content img {
+	max-height: 300px;
+	height: 50%;
+
+}
+.main_content_img{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.parallax_mountain,
+.parallax_fog{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 10
+}
+
+.parallax_mountain_1{
+	background-attachment: fixed;
+	background: url('../img/m_1.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+}
+.parallax_mountain_2{
+	background-attachment: fixed;
+	background: url('../img/m_2.png');
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: bottom right;
+}
+.parallax_mountain_3{
+	background-attachment: fixed;
+	background: url('../img/m_3.png');
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-position: bottom left;
+}
+.parallax_fog{
+	background-attachment: fixed;
+	background: url('../img/fog_1.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	z-index: 50
+}
+
 .nav-tabs{
 	border-bottom: none;
 	
@@ -144,7 +250,8 @@ main{
 nav{
 	
 }
-.nav-item{
+.nav-item,
+.nav-item2{
 	cursor: pointer;
 }
 .tab-content{
@@ -156,7 +263,8 @@ nav{
 }
 .tab-block{
 	height: 100%;
-	padding: 10px;
+	position: relative;
+	padding: 0 10px;
 	background-color: skyblue;
 }
 .tab-block:nth-child(1){
