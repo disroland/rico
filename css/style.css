@@ -7,6 +7,9 @@ a{
 	text-transform: uppercase;
 	font-size: 16px;
 }
+h1, h2{
+	text-align: center;
+}
 
 body{
 height: 100vh;
@@ -131,16 +134,17 @@ header{
 */
 /*hidden_menu*/
 .hidden_menu{
-	display: flex;
+	display: none;
 	width: 0;
-	height: 100vh;
+	padding: 10px 5px;
 	flex-direction: column;
 	position: absolute;
 	z-index: 60;
 	right: 0;
 	top: 100%;
 	transform: translateY(3000px);
-	transition: .5s;
+	transition: transform .5s;
+	transition-delay: .3s; 
 	background-color: rgba(255,255,255, 0.9);
 	border-radius: 10px;
 }
@@ -150,7 +154,9 @@ header{
 
 .show_hidden_menu{
 	transform: translateX(0);
+	display: flex;
 	width: 50vw;
+	
 }
 
 /*main*/
