@@ -11,6 +11,7 @@ let parallaxFog = document.querySelector('.parallax_fog');
 
 main.onclick = function(e){
 	let moveGrade = (e.screenX + e.screenY)/300;
+	if (moveGrade < 1) {moveGrade = 1.5}
 	parallaxFog.style.transform = 'scale(' + moveGrade + ')';
 }
 
