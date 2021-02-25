@@ -155,8 +155,7 @@ header{
 .show_hidden_menu{
 	transform: translateX(0);
 	display: flex;
-	width: 50vw;
-	
+	width: 50vw;	
 }
 
 /*main*/
@@ -166,7 +165,7 @@ main{
 	background-color: rgba(250,250,250, 0.9);
 	border: none;
 	margin: 10px 0;
-	overflow: hidden;
+	overflow: auto;
 	height: calc(100vh - 67px)
 }
 
@@ -246,7 +245,8 @@ main{
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-	z-index: 50
+	z-index: 50;
+	transition: 2s;
 }
 
 .nav-tabs{
@@ -270,7 +270,7 @@ nav{
 .tab-block{
 	height: 100%;
 	position: relative;
-	padding: 0 10px;
+	padding: 10px;
 	background-color: skyblue;
 }
 .tab-block:nth-child(1){
@@ -287,8 +287,8 @@ nav{
 	text-shadow: black -3px -3px 3px;
 }
 .tab-block:nth-child(2){
-color:red;
-text-shadow: 2px 2px 2px black;
+color: darkgreen;
+text-shadow: 1px 1px 2px silver;
 }
 
 /*footer

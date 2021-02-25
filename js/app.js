@@ -6,7 +6,13 @@ let navItems = document.querySelectorAll('.nav-item');
 let navItems2 = document.querySelectorAll('.nav-item2');
 let menuBtn = document.querySelector('.menu-btn');
 let hiddenMnu = document.querySelector('.hidden_menu');
+let main = document.querySelector('main');
+let parallaxFog = document.querySelector('.parallax_fog');
 
+main.onclick = function(e){
+	let moveGrade = (e.screenX + e.screenY)/300;
+	parallaxFog.style.transform = 'scale(' + moveGrade + ')';
+}
 
 for (let i=0; i<navTabs.length; i++){
 navTabs[i].addEventListener("click", showTabs)
