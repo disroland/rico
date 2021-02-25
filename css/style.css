@@ -52,6 +52,7 @@ header{
 }
 .header_menu{
 	display: flex;
+	z-index: 60;
 }
 
 .header_menu_items{
