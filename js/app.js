@@ -47,3 +47,51 @@ window.addEventListener('resize', function(){
 	    menuBtn.classList.remove('pressed')
 	
 })
+
+
+//modal
+$('.card img').on('click', function(e)
+{
+  let $imgSrc = $(this).attr('src');
+  let $modalImage = $('<img>');
+  let modalTXT = document.createElement('div');
+  let $modalText = $(this).closest('div')[0].nextElementSibling.innerHTML;
+  console.log($modalText);
+  modalTXT.innerHTML=$modalText;
+  modalTXT.style.color = 'skyblue';
+  modalTXT.style.fontSize = '20px';
+  modalTXT.style.textTransform = 'uppercase';
+  modalTXT.style.textShadow = 'black 1px 1px 2px';
+  modalTXT.classList.add('modalTxt');
+  modalTXT.classList.add('animated');
+  modalTXT.classList.add('rotateInDownRight');
+  $modalImage[0].classList.add('animated');
+  $modalImage[0].classList.add('fadeInLeft');
+  $modalImage.attr('src', $imgSrc).addClass('ba-modal__image');
+  $('.ba-modal-content-wrapper').append($modalImage);
+  $('.ba-modal-content-wrapper').append(modalTXT);
+  openModal();
+}
+)
+
+let openModal = function(){
+  $('.ba-modal').addClass('ba-modal-open');
+  $('body').addClass('ba-modal-is-open');
+  $(document).on('keydown', function (e){
+    if (e.keyCode == 27){
+      closeModal();
+    }
+  })
+}
+let closeModal = function(){
+  $('.ba-modal').removeClass('ba-modal-open');
+  $('body').removeClass('ba-modal-is-open');
+  $('.ba-modal-content-wrapper').empty();
+}
+$('.ba-modal-close').on('click', closeModal);
+$('.ba-modal').on('click', function(e){
+  let modalContent = $('.ba-modal-content');
+  if (!modalContent.is(e.target) && modalContent.has(e.target).length==0){
+    closeModal();
+  }
+})
