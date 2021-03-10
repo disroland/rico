@@ -1,5 +1,21 @@
 'use strict'
 
+// slider
+let z = 3
+if (window.innerWidth < 600) z = 1;
+let slSlider = function (){
+
+$('.multiple-items').slick({
+  infinite: true,
+  slidesToShow: z,
+  slidesToScroll: 1,
+  dots:true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+}
+window.onload = slSlider()
+
 let navTabs = document.querySelectorAll('.nav-tabs');
 let tabBlocks = document.querySelectorAll('.tab-block');
 let navItems = document.querySelectorAll('.nav-item');
@@ -95,3 +111,4 @@ $('.ba-modal').on('click', function(e){
     closeModal();
   }
 })
+

@@ -466,6 +466,76 @@ footer{
   align-self: flex-start;
   animation-duration: .6s;
   animation-delay: .5s; }
+/*slider*/
+.slide{
+	min-width: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+}
+.slide .slider_text{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(255,255,255, 0.8);
+	transform: translateY(-1000px);
+	transition: .5s;
+}
+.slide:hover .slider_text{
+	transform: translateY(0px);
+}
+.multiple-items{
+	width: 80%;
+	margin: 0 auto;
+
+}
+.slide img{
+	max-width: 100%;
+}
+.sl_img_wrap{
+	position: relative;
+}
+.sl_img_wrap p{
+	font-size: 0.9rem;
+}
+
+.slick-prev {
+	left:-35px;
+	z-index: 20;
+}
+.slick-prev::before {
+	content:'';
+	display: block;
+	width: 35px;
+	height: 35px;
+	background-image: url(../img/l_arrow.png);
+	background-size: contain;
+}
+.slick-next {
+	right:-25px;
+	z-index: 20;
+}
+.slick-next::before {
+	content:'';
+	display: block;
+	width: 35px;
+	height: 35px;
+	background-image: url(../img/r_arrow.png);
+	background-size: contain;
+}
+.slick-slide {
+	width: 30%;
+	max-height: 100%
+	margin-right:5px;
+}
+/*slider ends*/
+
   @media (orientation: portrait) {
     .modalTxt {
       align-self: center;
