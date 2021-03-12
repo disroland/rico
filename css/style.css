@@ -337,6 +337,7 @@ text-shadow: 1px 1px 2px silver;
   padding: 10px 5px; }
   .card h3{
   	color: black;
+  	text-align: center;
   	text-shadow: 1px 1px 1px darkgreen;
   	font-weight: 200;
   }
@@ -463,18 +464,19 @@ footer{
    }
 .ba-modal-open h3{
 color: darkgreen;
+text-align: center;
 }
 .ba-modal__image {
-  max-width: 75%;
+  max-width: 65%;
   padding: 10px;
-  max-height: 70vh;
+  max-height: 65vh;
   object-fit: contain; }
 
  .ba-modal-open p{
  	display: flex;
  	text-transform: capitalize;
  	font-family: sans-serif;
- 	font-size: 14px;
+ 	font-size: 13px;
  	color: black;
  	padding: 5px 20px;
  	text-shadow: none;
@@ -562,7 +564,12 @@ color: darkgreen;
 	margin-right:5px;
 }
 /*slider ends*/
- @media (orientation: portrait) {
+ 
+
+
+/*media*/
+
+@media (orientation: portrait) {
     .ba-modal-content-wrapper {
       flex-direction: column;
       align-items: center;
@@ -573,8 +580,6 @@ color: darkgreen;
       margin-top: 2rem; } 
       }
 
-
-/*media*/
 @media (max-width: 768px){
 .header_menu_items{
 	display:none;
@@ -583,3 +588,18 @@ color: darkgreen;
 	display:flex;
 }
 }
+
+@media (max-width: 600px){
+	.ba-modal__image {
+  max-width: 45%;}
+  	.ba-modal-open p{
+  	font-size: 10px;
+  	}
+  	.ba-modal-open h3{
+  	font-size: 14px;
+  	font-weight: 200;
+  	}	
+  	.card h3{
+  	font-size: 14px;
+  	font-weight: 200;
+	}
