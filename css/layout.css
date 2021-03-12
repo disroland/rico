@@ -33,9 +33,11 @@
 .ba-col-3 {
   width: 25%;
   margin-bottom: 1rem; }
+
   @media (orientation: portrait) {
     .ba-col-3 {
       width: 50%; } }
+    
 
 .ba-col-4 {
   width: 33.33333%; }
@@ -88,6 +90,32 @@
   .ba-col-sm-2 {
     width: 16.66%; }
   .ba-col-sm-1 {
+    width: 8.33%; } }
+
+    @media screen and (max-width: 600px) {
+  .ba-col-usm-12 {
+    width: 100%; }
+  .ba-col-usm-11 {
+    width: 91.66%; }
+  .ba-col-usm-10 {
+    width: 83.3%; }
+  .ba-col-usm-9 {
+    width: 74.97%; }
+  .ba-col-usm-8 {
+    width: 66.62%; }
+  .ba-col-usm-7 {
+    width: 58.3%; }
+  .ba-col-usm-6 {
+    width: 50%; }
+  .ba-col-usm-5 {
+    width: 41.65%; }
+  .ba-col-usm-4 {
+    width: 33.33%; }
+  .ba-col-usm-3 {
+    width: 24.98%; }
+  .ba-col-usm-2 {
+    width: 16.66%; }
+  .ba-col-usm-1 {
     width: 8.33%; } }
 
 /* common */
