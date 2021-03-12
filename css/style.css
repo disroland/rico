@@ -172,7 +172,8 @@ main{
 
 .main_page_wrap{
 	width: 100%;
-	height: calc(100vh - 67px);
+	min-height: 70vh;
+	height: 100%;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -199,7 +200,7 @@ main{
 }
 .main_page_content img {
 	max-height: 300px;
-	height: 70%;
+	height: 110%;
 
 }
 .main_content_img{
@@ -221,12 +222,12 @@ main{
 
 .parallax_mountain_1{
 	background-attachment: fixed;
-	background: url('../img/m_1.png');
+	background: url('../img/mountain2.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
 }
-.parallax_mountain_2{
+/*.parallax_mountain_2{
 	background-attachment: fixed;
 	background: url('../img/m_2.png');
 	background-repeat: no-repeat;
@@ -239,7 +240,7 @@ main{
 	background-repeat: no-repeat;
 	background-size: 90%;
 	background-position: bottom left;
-}
+}*/
 .parallax_fog{
 	background-attachment: fixed;
 	background: url('../img/fog_1.png');
