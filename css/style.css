@@ -6,6 +6,7 @@ a{
 	color: darkgreen;
 	text-transform: uppercase;
 	font-size: 16px;
+	font-family: sans-serif;
 }
 h1, h2{
 	text-align: center;
@@ -172,6 +173,22 @@ main{
 	overflow: auto;
 	height: calc(100vh - 67px)
 }
+main a{
+	text-transform:lowercase;
+	color: black;
+	letter-spacing: 2px;
+}
+main ul{
+	color: black;
+	font-family: serif;
+	letter-spacing: 1px;
+	list-style: none;
+}
+main li{
+	padding-left: 25px;
+	font-size: 0.9em;
+	text-shadow: none;
+}
 
 .main_page_wrap{
 	width: 100%;
@@ -276,6 +293,7 @@ main{
 	padding: 10px;
 	background-color: skyblue;
 }
+
 .tab-block:nth-child(1){
 	background-image: url(../img/mountain.jpg);
 	background-repeat: no-repeat;
@@ -335,7 +353,9 @@ text-shadow: 1px 1px 2px silver;
   justify-content: space-between;
   border: solid 2px darkgreen;
   border-radius: 25px 8px;
-  padding: 10px 5px; }
+  padding: 10px 5px;
+  transition: .5s;
+ }
   .card h3{
   	color: black;
   	text-align: center;
@@ -368,6 +388,10 @@ text-shadow: 1px 1px 2px silver;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
+	cursor: pointer;
+	}
+	.card:hover{
+		background-color: skyblue;
 	}
     	
 	.card img {
