@@ -79,10 +79,10 @@ $('.card img').on('click', function(e)
   modalTXT.style.textTransform = 'uppercase';
   modalTXT.style.textShadow = 'black 1px 1px 2px';
   modalTXT.classList.add('modalTxt');
-  modalTXT.classList.add('animated');
-  modalTXT.classList.add('rotateInDownRight');
-  $modalImage[0].classList.add('animated');
-  $modalImage[0].classList.add('fadeInLeft');
+  modalTXT.classList.add('animate__animated');
+  modalTXT.classList.add('animate__backInRight');
+  $modalImage[0].classList.add('animate__animated');
+  $modalImage[0].classList.add('animate__fadeInLeft');
   $modalImage.attr('src', $imgSrc).addClass('ba-modal__image');
   $('.ba-modal-content-wrapper').append($modalImage);
   $('.ba-modal-content-wrapper').append(modalTXT);
