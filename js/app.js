@@ -41,6 +41,12 @@ menuBtn.addEventListener('click', function(e){
 	}
 	)
 
+hiddenMnu.addEventListener('click', function(e){
+  hiddenMnu.classList.remove('show_hidden_menu');
+  menuBtn.classList.remove('pressed')
+  }
+  )
+
 
 function showTabs(e){
 	console.log(e.target.getAttribute('data-nav'));
